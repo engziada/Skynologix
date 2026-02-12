@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #003366;
+  --color-navy-dark: #001f3f;
+  --color-silver: #C0C0C0;
+  --color-silver-light: #F3F4F6;
+
+  --color-background: #ffffff;
+  --color-foreground: #001f3f;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #001f3f;
+  --navy: #003366;
+  --navy-dark: #001f3f;
+  --silver: #C0C0C0;
+  --silver-light: #F3F4F6;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-navy-dark;
+  }
+}
+
+.dots-grid {
+  background-image: radial-gradient(circle, #E5E7EB 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
